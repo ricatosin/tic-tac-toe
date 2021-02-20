@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 
 
 function Square (props) {
       return (
-        <button className="square" onClick={props.onClick}>  
+        <Button variant="outline-dark" className="square" onClick={props.onClick}>  
           {props.value}
         
-        </button>
+        </Button>
       );
   }
 
@@ -39,7 +41,7 @@ function Square (props) {
     }
   
     render() {
-      const status = 'Next player: X';
+      const status = `Next Player is ${this.state.xIsNext ? 'X': 'O'}`;
   
       return (
         <div>
